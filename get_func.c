@@ -1,4 +1,4 @@
-#include "headerfile.h"
+#include "main.h"
 
 /**
 * get_func - search for a function that match the symbol
