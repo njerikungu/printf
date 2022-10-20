@@ -8,43 +8,42 @@
 
 int _printf(const char *format, ...)
 {
-	int len = -1;
+	int i = 0, len;
+	va_list arg;
+	int (*func)(va_list);
 
-	if (format != NULL)
+	if (format == NULL)
+		return (-1);
+
+	va_start(arg, format);
+
+	if (format[0] == '%' && format[1] == '\0')
+		return (-1);
+
+	len = 0;
+
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		int i;
-		int (*func)(va_list);
-		va_list arg;
-
-		va_start(arg, format);
-		if (format[0] == '%' && format[1] == '\0')
-			return (-1);
-		len = 0;
-		for (i = 0; format[i] != '\0'; i++)
+		if (format[i] == '%')
 		{
-			if (format[i] == '%')
+			if (format[i + 1] == '%')
 			{
-				if (format[i + 1] == '%')
-				{
-					len += _putchar(format[i]);
-					i++;
-				}
-				else if (format[i + 1] != '\0')
-				{
-					func = get_func(format[i + 1]);
-					if (func)
-						len += func(arg);
-					else
-						len += (_putchar(format[i] + _putchar(format[i + 1])));
-					i++;
-				}
-			}
-			else
 				len += _putchar(format[i]);
+				i++;
+			}
+			else if (format[i + 1] != '\0')
+			{
+				func = get_func(format[i + 1]);
+				if (func)
+					len += func(arg);
+				else
+					len += (_putchar(format[i] + _putchar(format[i + 1])));
+				i++;
+			}
 		}
-		va_end(arg);
-		return (len);
+		else
+			len += _putchar(format[i]);
 	}
-	else
-		return (len);
+	va_end(arg);
+	return (len);
 }
