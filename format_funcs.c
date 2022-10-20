@@ -11,10 +11,7 @@ int print_c(va_list arg)
 	int c;
 
 	c = va_arg(arg, int);
-	if (c != NULL)
-		return (_putchar(c));
-
-	return (0);
+	return (_putchar(c));
 }
 
 
