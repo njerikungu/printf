@@ -9,21 +9,21 @@
 int (*get_func(char s))(va_list)
 {
 	format_t funcs[] = {
-	{"s", print_s},
-	{"c", print_c},
-	{"d", print_int},
-	{"i", print_i},
-	{"o", print_octal},
-	{"u", print_unint},
-	{"b", print_binary},
-};
-int i;
+		{"s", print_s},
+		{"c", print_c},
+		{"d", print_int},
+		{"i", print_i},
+		{"o", print_octal},
+		{"u", print_unint},
+		{"b", print_binary}
+	};
 
-for (i = 0; funcs[i].symbol != NULL; i++)
-{
-if (*funcs[i].symbol == s)
-return (funcs[i].func);
+	int i;
 
-}
-return (NULL);
+	for (i = 0; funcs[i].symbol != NULL; i++)
+	{
+		if (*funcs[i].symbol == s)
+			return (funcs[i].func);
+	}
+	return (NULL);
 }

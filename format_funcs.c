@@ -8,9 +8,8 @@
 
 int print_c(va_list arg)
 {
-	int c;
+	int c = va_arg(arg, int);
 
-	c = va_arg(arg, int);
 	return (_putchar(c));
 }
 
@@ -33,10 +32,7 @@ int print_s(va_list arg)
 		str = "(null)";
 
 	for (i = 0; str[i]; i++)
-	{
-		_putchar(str[i]);
-		len++;
-	}
+		len += _putchar(str[i]);
 
 	return (len);
 }
