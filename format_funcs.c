@@ -25,6 +25,7 @@ int print_s(va_list arg)
 {
 	int i;
 	char *str;
+	int len = 0;
 
 	str = va_arg(arg, char *);
 
@@ -32,9 +33,12 @@ int print_s(va_list arg)
 		str = "(null)";
 
 	for (i = 0; str[i]; i++)
+	{
 		_putchar(str[i]);
+		len++;
+	}
 
-	return (i);
+	return (len);
 }
 
 /**
