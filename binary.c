@@ -8,7 +8,8 @@
 
 int print_binary(va_list arg)
 {
-	unsigned int num, i, array[32], j, len;
+	unsigned int num;
+	int i, array[32], j, len;
 
 	num = va_arg(arg, int);
 	i = 0;
