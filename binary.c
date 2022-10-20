@@ -8,15 +8,14 @@
 
 int print_binary(va_list arg)
 {
-	unsigned int num;
-	int i, array[32], j, len;
+	unsigned int num, i, array[32], j, len;
 
 	num = va_arg(arg, int);
 	i = 0;
 
 	if (num < 1)
 	{
-		_putchar('-');
+		_putchar(48);
 		i++;
 		return (i);
 	}
