@@ -8,9 +8,13 @@
 
 int print_c(va_list arg)
 {
-	int c = va_arg(arg, int);
+	int c;
 
-	return (_putchar(c));
+	c = va_arg(arg, int);
+	if (c != NULL)
+		return (_putchar(c));
+
+	return (0);
 }
 
 
