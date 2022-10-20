@@ -17,10 +17,8 @@ int _printf(const char *format, ...)
 		va_list arg;
 
 		va_start(arg, format);
-
 		if (format[0] == '%' && format[1] == '\0')
 			return (-1);
-
 		len = 0;
 		for (i = 0; format[i] != '\0'; i++)
 		{
@@ -45,6 +43,8 @@ int _printf(const char *format, ...)
 				len += _putchar(format[i]);
 		}
 		va_end(arg);
+		return (len);
 	}
-	return (len);
+	else
+		return (len);
 }
