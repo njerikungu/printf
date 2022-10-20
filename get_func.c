@@ -13,6 +13,8 @@ int (*get_func(char s))(va_list)
 		{"c", print_c},
 		{"d", print_int},
 		{"i", print_i},
+		{"X", print_hex},
+		{"x", print_hexlow},
 		{"o", print_octal},
 		{"u", print_unint},
 		{"b", print_binary}
