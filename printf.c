@@ -34,7 +34,10 @@ int _printf(const char *format, ...)
 				else if (format[i + 1] != '\0')
 				{
 					func = get_func(format[i + 1]);
-					len += (func ? func(arg) : _putchar(format[i] + _putchar(format[i + 1])));
+					if (func)
+						len += func(arg);
+					else
+						len += (_putchar(format[i] + _putchar(format[i + 1])));
 					i++;
 				}
 			}
