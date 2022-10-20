@@ -8,7 +8,7 @@
 
 int print_octal(va_list arg)
 {
-	int arr[32], i, j, len;
+	int arr[64], i, j, len;
 	unsigned int num;
 
 	num = va_arg(arg, int);
