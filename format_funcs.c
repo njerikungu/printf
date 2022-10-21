@@ -96,18 +96,18 @@ int print_i(va_list arg)
 
 int print_unint(va_list arg)
 {
-	unsigned int num, div, temp_num, result, i;
+	unsigned int num, div, temp, result, i;
 
 	i = 0;
 
 	num = va_arg(arg, unsigned int);
-	temp_num = num;
+	temp = num;
 	div = 1;
 
 	while (temp_num > 9)
 	{
 		div *= 10;
-		temp_num /= 10;
+		temp /= 10;
 	}
 
 	while (div > 0)
