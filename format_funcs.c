@@ -104,7 +104,7 @@ int print_unint(va_list arg)
 	temp = num;
 	div = 1;
 
-	while (temp_num > 9)
+	while (temp > 9)
 	{
 		div *= 10;
 		temp /= 10;
