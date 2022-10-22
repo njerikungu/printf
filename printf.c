@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	if (format != NULL)
 	{
 		va_list arg;
-		int (*func)(va_list);
+		int (*func)(va_list arg);
 		int i;
 
 		va_start(arg, format);
@@ -41,8 +41,6 @@ int _printf(const char *format, ...)
 				len += _putchar(format[i]);
 		}
 		va_end(arg);
-		return (len);
 	}
-	else
-		return (len);
+	return (len);
 }
