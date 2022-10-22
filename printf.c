@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 					len += _putchar(format[i]);
 					i++;
 				}
-				if (format[i + 1] != '\0')
+				else if (format[i + 1] != '\0')
 				{
 					func = get_func(format[i + 1]);
 					if (func)
@@ -43,6 +43,8 @@ int _printf(const char *format, ...)
 				len += _putchar(format[i]);
 		}
 		va_end(arg);
+		return (len);
 	}
-	return (len);
+	else
+		return (len);
 }
