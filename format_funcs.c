@@ -71,6 +71,7 @@ int print_int(va_list arg)
 	{
 		result = num / div;
 		_putchar((result % 10) + '0');
+		num %= div;
 		div /= 10;
 		i++;
 	}
