@@ -32,10 +32,8 @@ int _printf(const char *format, ...)
 					func = get_func(format[i + 1]);
 					if (func)
 						len += func(arg);
-					else if (!func && format[i + 1] != ' ')
-					{
+					else
 						len += (_putchar(format[i]) + _putchar(format[i + 1]));
-					}
 					i++;
 				}
 			}
