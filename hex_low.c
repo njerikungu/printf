@@ -17,6 +17,8 @@ int print_hexlow(va_list arg)
 
 	if (num == 0)
 		return (_putchar('0'));
+	if (num < 1)
+		return (-1);
 	while (num > 0)
 	{
 		temp = 0;

@@ -106,6 +106,8 @@ int print_unint(va_list arg)
 
 	if (num < 1)
 		return (-1);
+	if (num == 0)
+		return (_putchar('0'));
 
 	while (temp > 9)
 	{
