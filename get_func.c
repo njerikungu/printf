@@ -19,6 +19,7 @@ int (*get_func(char s))(va_list)
 		{"u", print_unint},
 		{"b", print_binary},
 		{"S", print_S},
+		{"r", reverse_str},
 		{NULL, NULL}
 	};
 

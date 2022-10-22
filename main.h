@@ -38,5 +38,5 @@ int print_hex(va_list arg);
 int print_hexlow(va_list arg);
 int hex_print(char c);
 int print_S(va_list S);
-
+int reverse_str(va_list arg);
 #endif
