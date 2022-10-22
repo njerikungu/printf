@@ -30,11 +30,11 @@ int hex_print(char c)
   * Return: num of chars printed
   */
 
-int print_S(va_list S)
+int print_S(va_list arg)
 {
 	unsigned int i;
 	int len;
-	char *str = va_arg(S, char *);
+	char *str = va_arg(arg, char *);
 
 	len = 0;
 	if (str == NULL)

@@ -18,6 +18,7 @@ int (*get_func(char s))(va_list)
 		{"o", print_octal},
 		{"u", print_unint},
 		{"b", print_binary},
+		{"S", print_S},
 		{NULL, NULL}
 	};
 
