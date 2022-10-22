@@ -39,4 +39,9 @@ int print_hexlow(va_list arg);
 int hex_print(char c);
 int print_S(va_list S);
 int reverse_str(va_list arg);
+int _pow(unsigned int base, unsigned int exp);
+int print_p(va_list arg);
+
+
+
 #endif

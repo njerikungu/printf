@@ -20,6 +20,7 @@ int (*get_func(char s))(va_list)
 		{"b", print_binary},
 		{"S", print_S},
 		{"r", reverse_str},
+		{"p", print_p},
 		{NULL, NULL}
 	};
 
