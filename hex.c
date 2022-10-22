@@ -16,7 +16,7 @@ int print_hex(va_list arg)
 	i = 0;
 
 	if (num == 0)
-		return (_putchar('0');
+		return (_putchar('0'));
 
 	while (num > 0)
 	{
