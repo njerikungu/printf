@@ -36,6 +36,7 @@ int print_octal(va_list arg);
 int print_unint(va_list arg);
 int print_hex(va_list arg);
 int print_hexlow(va_list arg);
-
+int hex_print(char c);
+int print_S(va_list S);
 
 #endif
