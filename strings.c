@@ -26,7 +26,7 @@ int hex_print(char c)
 
 /**
   * print_S - print strings and non printable char
-  * arg: string to print
+  * @arg: string to print
   * Return: num of chars printed
   */
 
