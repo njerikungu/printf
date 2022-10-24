@@ -47,6 +47,11 @@ int print_p(va_list arg)
 
 	m = _pow(16, 15);
 	a[0] = n / m;
+	for (i = 1; i < 16; i++)
+	{
+		m /= 16;
+		a[i] = (n / m) % 16;
+	}
 	for (i = 0, sum = 0; i < 16; i++)
 	{
 		sum += a[i];

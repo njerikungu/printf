@@ -41,7 +41,7 @@ int print_S(va_list S);
 int reverse_str(va_list arg);
 int _pow(unsigned int base, unsigned int exp);
 int print_p(va_list arg);
-
+int rot13(va_list arg);
 
 
 #endif

@@ -21,6 +21,7 @@ int (*get_func(char s))(va_list)
 		{"S", print_S},
 		{"r", reverse_str},
 		{"p", print_p},
+		{"R", rot13},
 		{NULL, NULL}
 	};
 
