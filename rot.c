@@ -23,7 +23,7 @@ int rot13(va_list arg)
 		{
 			if (str[i] == s[x])
 			{
-				_write_char(u[x]);
+				_putchar(u[x]);
 				break;
 			}
 		}
